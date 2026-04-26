@@ -1,0 +1,63 @@
+# ─── Python / Django ─────────────────────────────────────────
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+*.egg
+dist/
+build/
+*.sqlite3
+*.db
+
+# Django generated
+backend/staticfiles/
+backend/media/
+backend/db.sqlite3
+
+# ─── Environment / Secrets ───────────────────────────────────
+# Real env files — never commit these
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env.test
+# .env.example files ARE committed (they contain no secrets)
+
+# ─── Node / Frontend ─────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+*.local
+bun.lockb
+
+# ─── Logs ────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ─── IDE / Editor ────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ─── OS ──────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Claude Code CLI ─────────────────────────────────────────
+.claude/
