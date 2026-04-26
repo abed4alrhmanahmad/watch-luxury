@@ -598,6 +598,8 @@ CREATE TABLE `orders_order` (
   `subtotal` decimal(10,2) NOT NULL,
   `shipping_cost` decimal(10,2) NOT NULL DEFAULT 0.00,
   `tax` decimal(10,2) NOT NULL DEFAULT 0.00,
+  `discount_amount` decimal(10,2) NOT NULL DEFAULT 0.00,
+  `coupon_code` varchar(50) NOT NULL DEFAULT '',
   `total` decimal(10,2) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -607,9 +609,9 @@ CREATE TABLE `orders_order` (
 -- Dumping data for table `orders_order`
 --
 
-INSERT INTO `orders_order` (`id`, `user_id`, `order_number`, `status`, `shipping_full_name`, `shipping_email`, `shipping_phone`, `shipping_address`, `shipping_city`, `shipping_state`, `shipping_zip`, `shipping_country`, `subtotal`, `shipping_cost`, `tax`, `total`, `created_at`, `updated_at`) VALUES
-(1, 2, '#823459', 'pending', 'Admin ChronoLux', 'admin@chronolux.com', 'asaas', 'asas', 'as', '2323', '1212', 'Lebanon', 599.00, 0.00, 59.90, 658.90, '2026-04-24 12:55:40', '2026-04-24 12:55:40'),
-(2, 2, '#137226', 'delivered', 'Admin ChronoLux', 'admin@chronolux.com', '811215475', '2451kjk', 'sidad', 'le', 'khk', 'Lebanon', 299.00, 0.00, 29.90, 328.90, '2026-04-24 21:49:58', '2026-04-24 21:56:02');
+INSERT INTO `orders_order` (`id`, `user_id`, `order_number`, `status`, `shipping_full_name`, `shipping_email`, `shipping_phone`, `shipping_address`, `shipping_city`, `shipping_state`, `shipping_zip`, `shipping_country`, `subtotal`, `shipping_cost`, `tax`, `discount_amount`, `coupon_code`, `total`, `created_at`, `updated_at`) VALUES
+(1, 2, '#823459', 'pending', 'Admin ChronoLux', 'admin@chronolux.com', 'asaas', 'asas', 'as', '2323', '1212', 'Lebanon', 599.00, 0.00, 59.90, 0.00, '', 658.90, '2026-04-24 12:55:40', '2026-04-24 12:55:40'),
+(2, 2, '#137226', 'delivered', 'Admin ChronoLux', 'admin@chronolux.com', '811215475', '2451kjk', 'sidad', 'le', 'khk', 'Lebanon', 299.00, 0.00, 29.90, 0.00, '', 328.90, '2026-04-24 21:49:58', '2026-04-24 21:56:02');
 
 -- --------------------------------------------------------
 
